@@ -1,0 +1,2 @@
+#!/bin/bash
+access.log \ | sort -rnk2 \ | head -n 11 \
