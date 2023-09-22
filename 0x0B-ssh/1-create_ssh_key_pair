@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Define the key file name
+key_file="school"
+
+# Define the number of bits
+bits="4096"
+
+# Define the passphrase
+passphrase="betty"
+
+# Generate the RSA key pair
+ssh-keygen -t rsa -b "$bits" -f "$key_file" -N "$passphrase"
+
+# Display key information
+echo "Generating public/private rsa key pair."
+echo "Your identification has been saved in $key_file."
+echo "Your public key has been saved in ${key_file}.pub."
+ssh-keygen -l -E md5 -f "$key_file"

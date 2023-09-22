@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Connect to the server using SSH with single-character flags
+ssh -i ~/.ssh/school -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" ubuntu@54.204.33.170
