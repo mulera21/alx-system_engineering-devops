@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name _;
+
+    location / {
+        proxy_pass http://localhost:8080; # This assumes your web application runs on port 8080
+    }
+
+    location /redirect_me {
+        return 301 https://$host$request_uri;
+    }
+}
